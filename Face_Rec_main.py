@@ -12,7 +12,7 @@ import matplotlib.cm as cm
 #define constants, imsize is the size of one size of the desired image (i.e. imsize=100 gives images of 100x100 pixels)
 imsize=100
 #layers sizes are the number of neurons in each layer of the network, num_labels it the output layer of the network
-input_layer_size  = imsize*imsize 
+input_layer_size  = imsize**2
 hidden_layer_size = 1
 num_labels = 2
 #how many sample images to use for each class of the training set
