@@ -21,8 +21,8 @@ numimages=10
 lamb=1
 
 #variables to hold images of each class, JA=jennifer aniston, CD=cameron diaz
-JA=np.zeros((numimages,imsize*imsize))
-CD=np.zeros((numimages,imsize*imsize))
+JA=np.zeros((numimages,input_layer_size))
+CD=np.zeros((numimages,input_layer_size))
 
 #gadient descent algorithm
 def graddesc(weights,insize,hidsize,outsize,x,y,lamb,numiter):
@@ -165,7 +165,7 @@ for i in range(0,numimages):
 	imgray=rgb2gray(im)
 	JA[i,]=imgray
 #put training data into a single variable, x
-x=np.zeros((len(CD)+len(JA),imsize*imsize))
+x=np.zeros((len(CD)+len(JA),input_layer_size))
 x[0:len(CD),:]=CD
 x[len(CD):,:]=JA
 y=np.zeros((len(CD)+len(JA),1))
